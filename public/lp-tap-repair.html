@@ -58,8 +58,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .usp-bar { display:grid; grid-template-columns:repeat(4,1fr); background:var(--navy); color:#fff; }
 .usp { display:flex; align-items:center; gap:16px; padding:26px clamp(22px,3vw,42px); border-right:1px solid rgba(255,255,255,.12); }
 .usp >span,.icon-box,.feature-row >span { width:68px; height:68px; display:grid; place-items:center; border-radius:999px; flex:none; background:linear-gradient(135deg,var(--blue),#78D8FF); color:#fff; box-shadow:0 12px 26px rgba(43,181,240,.22); font-size:26px; font-weight:900; }
-.usp >span.usp-logo { background:#fff; padding:8px; box-shadow:0 12px 26px rgba(255,255,255,.14); }
-.usp >span.usp-logo img { max-width:100%; max-height:100%; object-fit:contain; }
+.usp >span.usp-logo { padding:0; overflow:hidden; background:#fff; box-shadow:0 12px 26px rgba(255,255,255,.14); }
+.usp >span.usp-logo img { width:40px; height:40px; max-width:none; max-height:none; object-fit:contain; }
 .usp strong { display:block; min-height:63px; font-family:'Barlow Condensed'; font-size:35px; line-height:.9; font-weight:800; text-transform:uppercase; }
 .usp small { color:rgba(255,255,255,.70); font-size:13px; font-weight:800; letter-spacing:.03em; text-transform:uppercase; }
 .section { padding:clamp(58px,7vw,96px) clamp(22px,4vw,58px); background:#fff; }
