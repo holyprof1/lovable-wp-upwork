@@ -69,13 +69,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .process { background:var(--navy); color:#fff; }
 .process .section-head h2 { color:#fff; }.process .section-head p { color:rgba(255,255,255,.76); }
 .section-head { max-width:760px; margin:0 auto 44px; text-align:center; }
+.section-head h2 { min-height:136px; display:flex; align-items:flex-end; justify-content:center; }
+.content-grid .section-head h2, .content-grid h2 { min-height:136px; display:flex; align-items:flex-end; }
+.step-card h3, .property-card h3 { min-height:64px; display:flex; align-items:flex-end; }
+.pricing-head h2, .form-head h2, .final-cta h2 { min-height:72px; display:flex; align-items:flex-end; justify-content:center; }
+@media (max-width:900px){ .section-head h2, .content-grid .section-head h2, .content-grid h2 { min-height:auto; } }
+
 .card-grid { max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .step-card,.property-card,.review-card,.pricing-card { background:#fff; border-radius:8px; box-shadow:0 4px 0 rgba(12,35,64,.08), 0 16px 40px rgba(12,35,64,.16); }
 .step-card,.property-card { position:relative; padding:38px 30px 36px; overflow:hidden; border-bottom:6px solid var(--blue); transition:transform .18s ease, box-shadow .18s ease; }
 .step-card:hover,.property-card:hover { transform:translateY(-6px); box-shadow:0 18px 42px rgba(12,35,64,.22); }
 .step-number { position:absolute; top:-4px; right:22px; font-family:'Barlow Condensed'; font-size:104px; line-height:1; color:rgba(12,35,64,.07); font-weight:800; }
 .step-card h3,.property-card h3,.feature-row h3 { margin:18px 0 8px; color:var(--navy); font-size:32px; line-height:1; font-weight:800; text-transform:uppercase; }
-.property-card h3 { min-height:64px; display:flex; align-items:flex-end; }
 .center { text-align:center; margin-top:38px; }
 .why { background:var(--lightbg); }
 .feature-row { display:flex; gap:18px; margin:24px 0; }
