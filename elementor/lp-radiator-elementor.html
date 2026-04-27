@@ -100,9 +100,9 @@ body:has(.fpp-landing) .page-content) {
 .fpp-landing .hero::before { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,35,64,.76), rgba(12,35,64,.82)); pointer-events:none; }
 .fpp-landing .hero >* { position:relative; z-index:1; }
 .fpp-landing .hero-copy { align-self:center; display:flex; flex-direction:column; align-items:center; gap:16px; width:min(100%,1040px); max-width:1040px; margin:0 auto; text-align:center; animation:fadeUp .6s ease-out both; }
-.fpp-landing .eyebrow,.fpp-landing .label-blue,.fpp-landing .label-red { display:inline-flex; text-transform:uppercase; letter-spacing:.12em; font:800 12px Inter,sans-serif; color:rgba(255,255,255,.78); }
+.fpp-landing .eyebrow,.fpp-landing .label-blue,.fpp-landing .label-red { display:inline-flex; margin:0; text-transform:uppercase; letter-spacing:.12em; font:800 12px Inter,sans-serif; color:rgba(255,255,255,.78); }
 .fpp-landing .label-blue { color:var(--blue); }.fpp-landing .label-red { color:var(--red); }
-.fpp-landing .hero h1 { max-width:880px; margin:0; font-size:clamp(54px,6.4vw,96px); line-height:.96; font-weight:800; color:#fff; text-shadow:0 5px 22px rgba(0,0,0,.42); }
+.fpp-landing .hero .hero-title { max-width:880px; margin:0; font-size:clamp(54px,6.4vw,96px); line-height:.96; font-weight:800; color:#fff; text-shadow:0 5px 22px rgba(0,0,0,.42); }
 .fpp-landing .hero-body { max-width:780px; margin:0 auto; color:#fff; font-size:clamp(18px,1.55vw,22px); line-height:1.55; font-weight:700; text-shadow:0 3px 14px rgba(0,0,0,.42); }
 .fpp-landing .trust-row,.fpp-landing .hero-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
 .fpp-landing .trust-badge { display:inline-flex; border:1px solid rgba(255,255,255,.30); padding:8px 12px; color:#fff; font-size:13px; font-weight:800; background:rgba(0,0,0,.24); border-radius:8px; }
@@ -125,8 +125,8 @@ body:has(.fpp-landing) .page-content) {
 .fpp-landing .usp >span.usp-logo { padding:0; overflow:hidden; background:#fff; box-shadow:0 12px 26px rgba(255,255,255,.14); }
 .fpp-landing .usp >span.usp-logo img { width:40px; height:40px; max-width:none; max-height:none; object-fit:contain; }
 .fpp-landing .usp >span.usp-icon svg { width:32px; height:32px; display:block; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; fill:none; }
-.fpp-landing .usp strong { display:block; min-height:63px; font-family:'Barlow Condensed'; font-size:35px; line-height:.9; font-weight:800; text-transform:uppercase; }
-.fpp-landing .usp small { color:rgba(255,255,255,.70); font-size:13px; font-weight:800; letter-spacing:.03em; text-transform:uppercase; }
+.fpp-landing .usp strong { display:block; min-height:95px; font-family:'Barlow Condensed'; font-size:35px; line-height:.9; font-weight:800; text-transform:uppercase; }
+.fpp-landing .usp small { display:block; min-height:32px; color:rgba(255,255,255,.70); font-size:13px; line-height:1.2; font-weight:800; letter-spacing:.03em; text-transform:uppercase; }
 .fpp-landing .section { padding:clamp(58px,7vw,96px) clamp(22px,4vw,58px); background:#fff; }
 .fpp-landing .section h2 { margin:12px 0 20px; color:var(--navy); font-size:clamp(42px,5vw,72px); line-height:.95; font-weight:800; }
 .fpp-landing .section p { color:#586476; }
@@ -227,8 +227,8 @@ body:has(.fpp-landing) .page-content) {
 .fpp-landing .mobile-cta { display:none; }
 @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
 @media (max-width:1040px){ .fpp-landing .nav-menu{display:none}.fpp-landing .hamburger{display:block}.fpp-landing .mobile-menu.open{display:grid}.fpp-landing .mobile-menu{position:fixed; top:102px; left:0; right:0; z-index:99; background:var(--navy); padding:18px 22px; gap:12px; box-shadow:0 14px 28px rgba(0,0,0,.28)}.fpp-landing .mobile-menu a{color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;font-family:'Barlow Condensed';font-size:22px}.fpp-landing .nav-call em{display:none}.fpp-landing .nav-call{grid-template-columns:42px auto}.fpp-landing .nav-call span{width:42px;height:42px}.fpp-landing .nav-call strong{font-size:22px} }
-@media (max-width:900px){ .fpp-landing .content-grid,.fpp-landing .card-grid,.fpp-landing .property-grid,.fpp-landing .footer-grid{grid-template-columns:1fr}.fpp-landing .usp-bar{grid-template-columns:repeat(2,1fr)}.fpp-landing .section-photo{height:360px}.fpp-landing .review-card blockquote{min-height:auto}.fpp-landing .stats-strip{grid-template-columns:repeat(2,1fr)}.fpp-landing .hero-copy{align-items:center;text-align:center}.fpp-landing .hero h1{font-size:clamp(46px,10vw,72px)} }
-@media (max-width:767px){ .fpp-landing{padding-bottom:76px}.fpp-landing .topbar{font-size:14px}.fpp-landing .main-nav{top:0;min-height:66px;padding:8px 14px}.fpp-landing .logo-wordmark{display:none}.fpp-landing .logo img{height:44px}.fpp-landing .nav-call{display:none}.fpp-landing .hero{padding:54px 18px;min-height:520px}.fpp-landing .hero-buttons a{width:100%}.fpp-landing .booking-highlights,.fpp-landing .grid-2col{grid-template-columns:1fr}.fpp-landing .section{padding:54px 18px}.fpp-landing .mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--navy);padding:10px 12px;gap:10px;box-shadow:0 -4px 20px rgba(0,0,0,.25)}.fpp-landing .mobile-cta a{flex:1;text-align:center;font-family:'Inter';font-weight:700;font-size:.92rem;padding:14px 0;border-radius:8px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;color:#fff;transition:transform .18s ease, box-shadow .18s ease}.fpp-landing .mobile-cta a:first-child{background:var(--blue)}.fpp-landing .mobile-cta a:last-child{background:var(--red)}.fpp-landing .mobile-cta a:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.22)} }
+@media (max-width:900px){ .fpp-landing .content-grid,.fpp-landing .card-grid,.fpp-landing .property-grid,.fpp-landing .footer-grid{grid-template-columns:1fr}.fpp-landing .usp-bar{grid-template-columns:repeat(2,1fr)}.fpp-landing .section-photo{height:360px}.fpp-landing .review-card blockquote{min-height:auto}.fpp-landing .stats-strip{grid-template-columns:repeat(2,1fr)}.fpp-landing .hero-copy{align-items:center;text-align:center}.fpp-landing .hero .hero-title{font-size:clamp(46px,10vw,72px)} }
+@media (max-width:767px){ .fpp-landing{padding-bottom:76px}.fpp-landing .topbar{font-size:14px}.fpp-landing .main-nav{top:0;min-height:66px;padding:8px 14px}.fpp-landing .logo-wordmark{display:none}.fpp-landing .logo img{height:44px}.fpp-landing .nav-call{display:grid}.fpp-landing .hero{padding:54px 18px;min-height:520px}.fpp-landing .hero-buttons a{width:100%}.fpp-landing .booking-highlights,.fpp-landing .grid-2col{grid-template-columns:1fr}.fpp-landing .section{padding:54px 18px}.fpp-landing .mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--navy);padding:10px 12px;gap:10px;box-shadow:0 -4px 20px rgba(0,0,0,.25)}.fpp-landing .mobile-cta a{flex:1;text-align:center;font-family:'Inter';font-weight:700;font-size:.92rem;padding:14px 0;border-radius:8px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;color:#fff;transition:transform .18s ease, box-shadow .18s ease}.fpp-landing .mobile-cta a:first-child{background:var(--blue)}.fpp-landing .mobile-cta a:last-child{background:var(--red)}.fpp-landing .mobile-cta a:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.22)} }
 @media (max-width:480px){ .fpp-landing .usp-bar,.fpp-landing .stats-strip{grid-template-columns:1fr}.fpp-landing .form-head,.fpp-landing .form-body,.fpp-landing .pricing-head,.fpp-landing .pricing-body{padding-left:20px;padding-right:20px}.fpp-landing .btn-primary,.fpp-landing .btn-outline{font-size:20px;width:100%} }
 @media (prefers-reduced-motion:reduce){ .fpp-landing *,.fpp-landing *::before,.fpp-landing *::after{animation:none!important;scroll-behavior:auto!important;transition:none!important} }@media (max-width:767px){ .fpp-landing .logo-wordmark{display:flex!important;font-size:18px} .fpp-landing .logo img{height:38px} .fpp-landing .logo{gap:8px} }
 
@@ -490,6 +490,34 @@ body:has(.fpp-landing) .page-content) {
     padding-bottom: 0 !important;
   }
 
+  .fpp-landing .main-nav {
+    gap: 10px;
+  }
+
+  .fpp-landing .nav-call {
+    display: grid !important;
+    grid-template-columns: 38px;
+    flex: 0 0 38px;
+    max-width: 38px;
+    min-width: 38px;
+    overflow: visible;
+  }
+
+  .fpp-landing .nav-call span {
+    width: 38px;
+    height: 38px;
+  }
+
+  .fpp-landing .nav-call em,
+  .fpp-landing .nav-call strong {
+    display: none !important;
+  }
+
+  .fpp-landing .nav-call span .fpp-icon {
+    width: 22px;
+    height: 22px;
+  }
+
   .fpp-landing .lp-footer {
     padding-bottom: calc(52px + 76px) !important;
   }
@@ -537,8 +565,8 @@ body:has(.fpp-landing) .page-content) {
 </div>
 <header class="hero" style="background-image:url('https://flow-plus-pages.lovable.app/images/radiator-green.jpg')">
 <div class="hero-copy">
-<span class="eyebrow">#1 Radiator Repair North London</span>
-<h1>Cold Radiators or Leaks? Get Heat Back Fast.</h1>
+<h1 class="eyebrow">#1 Radiator Repair North London</h1>
+<h2 class="hero-title">Cold Radiators or Leaks? Get Heat Back Fast.</h2>
 <p class="hero-body">Radiator repairs, replacements, balancing, and powerflushing across North London with upfront advice before work starts.</p>
 <div class="trust-row">
 <span class="trust-badge">
