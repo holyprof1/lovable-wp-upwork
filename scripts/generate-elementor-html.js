@@ -102,10 +102,13 @@ body:has(.fpp-landing) .page-content) {
 .fpp-landing {
   width: 100vw;
   max-width: 100vw;
-  margin: 0 calc(50% - 50vw) !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
   overflow-x: hidden;
   overflow-x: clip;
   box-sizing: border-box;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   padding: 0 !important;
   position: relative;
   display: block;
@@ -126,7 +129,6 @@ body:has(.fpp-landing) .page-content) {
 `.trim();
 
 const ELEMENTOR_OVERRIDE_CSS = `
-.fpp-landing,
 .fpp-landing #top,
 .fpp-landing .topbar,
 .fpp-landing .main-nav,
@@ -152,7 +154,6 @@ const ELEMENTOR_OVERRIDE_CSS = `
   max-width: 100%;
 }
 
-.fpp-landing,
 .fpp-landing #top,
 .fpp-landing .topbar,
 .fpp-landing .main-nav,

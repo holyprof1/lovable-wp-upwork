@@ -40,10 +40,13 @@ body:has(.fpp-landing) .page-content) {
 .fpp-landing {
   width: 100vw;
   max-width: 100vw;
-  margin: 0 calc(50% - 50vw) !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
   overflow-x: hidden;
   overflow-x: clip;
   box-sizing: border-box;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   padding: 0 !important;
   position: relative;
   display: block;
@@ -232,7 +235,6 @@ body:has(.fpp-landing) .page-content) {
 @media (max-width:480px){ .fpp-landing .usp-bar,.fpp-landing .stats-strip{grid-template-columns:1fr}.fpp-landing .form-head,.fpp-landing .form-body,.fpp-landing .pricing-head,.fpp-landing .pricing-body{padding-left:20px;padding-right:20px}.fpp-landing .btn-primary,.fpp-landing .btn-outline{font-size:20px;width:100%} }
 @media (prefers-reduced-motion:reduce){ .fpp-landing *,.fpp-landing *::before,.fpp-landing *::after{animation:none!important;scroll-behavior:auto!important;transition:none!important} }@media (max-width:767px){ .fpp-landing .logo-wordmark{display:flex!important;font-size:18px} .fpp-landing .logo img{height:38px} .fpp-landing .logo{gap:8px} }
 
-.fpp-landing,
 .fpp-landing #top,
 .fpp-landing .topbar,
 .fpp-landing .main-nav,
@@ -258,7 +260,6 @@ body:has(.fpp-landing) .page-content) {
   max-width: 100%;
 }
 
-.fpp-landing,
 .fpp-landing #top,
 .fpp-landing .topbar,
 .fpp-landing .main-nav,
