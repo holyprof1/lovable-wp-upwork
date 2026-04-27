@@ -2,12 +2,27 @@ import fs from "fs";
 import path from "path";
 import postcss from "postcss";
 
-const SOURCE_FILES = [
-  "lp-emergency-plumber.html",
-  "lp-drain-unblocking.html",
-  "lp-leak-detection.html",
-  "lp-radiator.html",
-  "lp-tap-repair.html",
+const SOURCE_PAGES = [
+  {
+    fileName: "lp-emergency-plumber.html",
+    sourceUrl: "https://flow-plus-pages.lovable.app/lp-emergency-plumber.html",
+  },
+  {
+    fileName: "lp-drain-unblocking.html",
+    sourceUrl: "https://flow-plus-pages.lovable.app/lp-drain-unblocking.html",
+  },
+  {
+    fileName: "lp-leak-detection.html",
+    sourceUrl: "https://flow-plus-pages.lovable.app/lp-leak-detection.html",
+  },
+  {
+    fileName: "lp-radiator.html",
+    sourceUrl: "https://flow-plus-pages.lovable.app/lp-radiator.html",
+  },
+  {
+    fileName: "lp-tap-repair.html",
+    sourceUrl: "https://flow-plus-pages.lovable.app/lp-tap-repair.html",
+  },
 ];
 
 const SOURCE_DIR = path.join(process.cwd(), "public");
@@ -448,6 +463,14 @@ function extractBodyContent(html) {
 
 function removeLovableBadge(markup) {
   return markup
+    .replace(
+      /<aside\b[^>]*\bid=["']lovable-badge["'][\s\S]*?<\/aside>/gi,
+      "",
+    )
+    .replace(
+      /<script>\s*\/\/ Don't show the lovable-badge[\s\S]*?<\/script>/gi,
+      "",
+    )
     .replace(/<a[^>]*href="[^"]*lovable\.dev[^"]*"[\s\S]*?<\/a>/gi, "")
     .replace(/<div[^>]*>[\s\S]*?Edit with[\s\S]*?lovable[\s\S]*?<\/div>/gi, "")
     .trim();
@@ -641,16 +664,82 @@ function buildAssetReport(entries) {
   return lines.join("\n");
 }
 
-function main() {
+function getPageByName(name) {
+  return SOURCE_PAGES.find(
+    (page) =>
+      page.fileName === name ||
+      page.fileName.replace(/\.html$/, "") === name ||
+      page.fileName.replace(/^lp-/, "").replace(/\.html$/, "") === name,
+  );
+}
+
+function parseArgs(argv) {
+  const options = {
+    sourceMode: "local",
+    names: [],
+  };
+
+  for (const arg of argv) {
+    if (arg === "--live" || arg === "--source=live") {
+      options.sourceMode = "live";
+      continue;
+    }
+
+    if (arg === "--local" || arg === "--source=local") {
+      options.sourceMode = "local";
+      continue;
+    }
+
+    options.names.push(arg);
+  }
+
+  return options;
+}
+
+function getRequestedPages(names) {
+  if (names.length === 0) {
+    return SOURCE_PAGES;
+  }
+
+  return names.map((name) => {
+    const page = getPageByName(name);
+
+    if (!page) {
+      throw new Error(`Unknown landing page: ${name}`);
+    }
+
+    return page;
+  });
+}
+
+async function readSourcePage(page, sourceMode) {
+  if (sourceMode === "live") {
+    const response = await fetch(page.sourceUrl);
+
+    if (!response.ok) {
+      throw new Error(
+        `Could not fetch ${page.sourceUrl}: ${response.status} ${response.statusText}`,
+      );
+    }
+
+    return response.text();
+  }
+
+  const sourcePath = path.join(SOURCE_DIR, page.fileName);
+  return fs.readFileSync(sourcePath, "utf8");
+}
+
+async function main() {
+  const options = parseArgs(process.argv.slice(2));
+  const pages = getRequestedPages(options.names);
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
   const reportEntries = [];
 
-  for (const fileName of SOURCE_FILES) {
-    const sourcePath = path.join(SOURCE_DIR, fileName);
-    const outputName = fileName.replace(".html", "-elementor.html");
+  for (const page of pages) {
+    const outputName = page.fileName.replace(".html", "-elementor.html");
     const outputPath = path.join(OUTPUT_DIR, outputName);
-    const html = fs.readFileSync(sourcePath, "utf8");
+    const html = await readSourcePage(page, options.sourceMode);
     const result = buildFinalHtml(html);
 
     fs.writeFileSync(outputPath, result.html, "utf8");
@@ -660,11 +749,13 @@ function main() {
     });
   }
 
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, "assets-needed.txt"),
-    buildAssetReport(reportEntries),
-    "utf8",
-  );
+  if (pages.length === SOURCE_PAGES.length) {
+    fs.writeFileSync(
+      path.join(OUTPUT_DIR, "assets-needed.txt"),
+      buildAssetReport(reportEntries),
+      "utf8",
+    );
+  }
 }
 
 main();
