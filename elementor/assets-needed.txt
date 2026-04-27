@@ -1,0 +1,54 @@
+Elementor Canvas assets used by the regenerated Lovable landing pages
+
+Shared external font import
+- https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap
+
+Notes
+- Asset URLs below point directly to the Lovable source page assets so the Elementor exports match the source more literally.
+
+lp-emergency-plumber-elementor.html
+- brand_assets/fpp_logo_big.png -> https://flow-plus-pages.lovable.app/brand_assets/fpp_logo_big.png
+- brand_assets/checkatrade-mark.png -> https://flow-plus-pages.lovable.app/brand_assets/checkatrade-mark.png
+- brand_assets/checkatrade-wordmark.png -> https://flow-plus-pages.lovable.app/brand_assets/checkatrade-wordmark.png
+- images/stopcock.jpg -> https://flow-plus-pages.lovable.app/images/stopcock.jpg
+- brand_assets/img_1981.jpg -> https://flow-plus-pages.lovable.app/brand_assets/img_1981.jpg
+- brand_assets/img_2899.jpg -> https://flow-plus-pages.lovable.app/brand_assets/img_2899.jpg
+- brand_assets/fpp_logo.png -> https://flow-plus-pages.lovable.app/brand_assets/fpp_logo.png
+
+lp-drain-unblocking-elementor.html
+- brand_assets/fpp_logo_big.png -> https://flow-plus-pages.lovable.app/brand_assets/fpp_logo_big.png
+- images/drain-milwaukee.jpg -> https://flow-plus-pages.lovable.app/images/drain-milwaukee.jpg
+- brand_assets/checkatrade-mark.png -> https://flow-plus-pages.lovable.app/brand_assets/checkatrade-mark.png
+- brand_assets/checkatrade-wordmark.png -> https://flow-plus-pages.lovable.app/brand_assets/checkatrade-wordmark.png
+- images/drain-pipework.jpg -> https://flow-plus-pages.lovable.app/images/drain-pipework.jpg
+- brand_assets/img_1981.jpg -> https://flow-plus-pages.lovable.app/brand_assets/img_1981.jpg
+- brand_assets/img_1755.jpg -> https://flow-plus-pages.lovable.app/brand_assets/img_1755.jpg
+- brand_assets/fpp_logo.png -> https://flow-plus-pages.lovable.app/brand_assets/fpp_logo.png
+
+lp-leak-detection-elementor.html
+- brand_assets/fpp_logo_big.png -> https://flow-plus-pages.lovable.app/brand_assets/fpp_logo_big.png
+- images/leak-pipework.jpg -> https://flow-plus-pages.lovable.app/images/leak-pipework.jpg
+- brand_assets/checkatrade-mark.png -> https://flow-plus-pages.lovable.app/brand_assets/checkatrade-mark.png
+- brand_assets/checkatrade-wordmark.png -> https://flow-plus-pages.lovable.app/brand_assets/checkatrade-wordmark.png
+- images/stopcock.jpg -> https://flow-plus-pages.lovable.app/images/stopcock.jpg
+- brand_assets/img_2899.jpg -> https://flow-plus-pages.lovable.app/brand_assets/img_2899.jpg
+- brand_assets/img_1755.jpg -> https://flow-plus-pages.lovable.app/brand_assets/img_1755.jpg
+- brand_assets/fpp_logo.png -> https://flow-plus-pages.lovable.app/brand_assets/fpp_logo.png
+
+lp-radiator-elementor.html
+- brand_assets/fpp_logo_big.png -> https://flow-plus-pages.lovable.app/brand_assets/fpp_logo_big.png
+- images/radiator-green.jpg -> https://flow-plus-pages.lovable.app/images/radiator-green.jpg
+- brand_assets/checkatrade-mark.png -> https://flow-plus-pages.lovable.app/brand_assets/checkatrade-mark.png
+- brand_assets/checkatrade-wordmark.png -> https://flow-plus-pages.lovable.app/brand_assets/checkatrade-wordmark.png
+- images/towel-rail-chrome.jpg -> https://flow-plus-pages.lovable.app/images/towel-rail-chrome.jpg
+- brand_assets/fpp_logo.png -> https://flow-plus-pages.lovable.app/brand_assets/fpp_logo.png
+
+lp-tap-repair-elementor.html
+- brand_assets/fpp_logo_big.png -> https://flow-plus-pages.lovable.app/brand_assets/fpp_logo_big.png
+- images/basin-tap-3hole.jpg -> https://flow-plus-pages.lovable.app/images/basin-tap-3hole.jpg
+- brand_assets/checkatrade-mark.png -> https://flow-plus-pages.lovable.app/brand_assets/checkatrade-mark.png
+- brand_assets/checkatrade-wordmark.png -> https://flow-plus-pages.lovable.app/brand_assets/checkatrade-wordmark.png
+- images/kitchen-tap.jpg -> https://flow-plus-pages.lovable.app/images/kitchen-tap.jpg
+- images/basin-large-white.jpg -> https://flow-plus-pages.lovable.app/images/basin-large-white.jpg
+- brand_assets/img_1755.jpg -> https://flow-plus-pages.lovable.app/brand_assets/img_1755.jpg
+- brand_assets/fpp_logo.png -> https://flow-plus-pages.lovable.app/brand_assets/fpp_logo.png
